@@ -1,0 +1,8 @@
+.pio
+.vscode
+data
+test
+platformio.ini
+replace_fs.py
+workspace.code-workspace 
+compile_commands.json
