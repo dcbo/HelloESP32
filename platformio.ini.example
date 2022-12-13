@@ -10,12 +10,16 @@
 ; #   '-DMQTT_PREFIX="esp32/hello"    '                  // The prefix for all MQTT-topics
 ; #   '-DWIFI_SSID="mySSID"'                             // WiFi SSID  
 ; #   '-DWIFI_PSK="myWiFiPassword"'                      // WiFi Password
+; #   '-DMQTT_SERVER="mqtt.example.de"'	                 // MQTT Server
+; #   '-DMQTT_PORT=1883'	                             // MQTT Port
+; #   '-DMQTT_USER="Username"'                           // MQTT Username
+; #   '-DMQTT_PASS="myMQTTPassword"'                     // MQTT Password
 ; #   '-DOTA_HASH="[MD5-Hash_from_OTA-PASS]"'            // MD5-Hash of OTA-Password, e.g: MD5("OTAAccessESP32") = "80e98f64761e74aae38bdea95f9ccefd"
 ; #
 ; # ### Upload Params ###
 ; #   upload_port = 192.168.1.123                        // IP-Address of device used for OTA Flashing
 ; #   upload_flags = 
-; #      --auth=[OTA-PASS]                               // OTA-Password
+; #      --auth=[OTA-PASS]                               // OTA-Password matching Entry "-DOTA_HASH"
 ; #
 ; # ### available Python Skripts ###
 ; #   - pre:version_increment/version_increment_pre.py                  // Increment Version Counter after Upload
@@ -46,7 +50,11 @@ build_flags =
 	'-DMQTT_PREFIX="esp32/hello-serial"'
 	'-DWIFI_SSID="MYWIFISSID"'
 	'-DWIFI_PSK="MYWIFIPASSWORD"'
-	'-DOTA_HASH="80e98f64761e74aae38bdea95f9ccefd"'	
+    '-DMQTT_SERVER="mqtt.example.de"'
+    '-DMQTT_PORT=1883'
+    '-DMQTT_USER="Username"'
+    '-DMQTT_PASS="myMQTTPassword"'
+	'-DOTA_HASH="80e98f64761e74aae38bdea95f9ccefd"'
 monitor_port = com9
 monitor_speed = 115200
 monitor_filters = time, default
@@ -77,7 +85,11 @@ build_flags =
 	'-DMQTT_PREFIX="esp32/hello-ota"'
 	'-DWIFI_SSID="MYWIFISSID"'
 	'-DWIFI_PSK="MYWIFIPASSWORD"'
-	'-DOTA_HASH="80e98f64761e74aae38bdea95f9ccefd"'	
+    '-DMQTT_SERVER="mqtt.example.de"'
+    '-DMQTT_PORT=1883'
+    '-DMQTT_USER="Username"'
+    '-DMQTT_PASS="myMQTTPassword"'
+	'-DOTA_HASH="80e98f64761e74aae38bdea95f9ccefd"'
 upload_protocol = espota
 upload_port = 192.168.1.222
 upload_flags = 
@@ -108,7 +120,11 @@ build_flags =
 	'-DMQTT_PREFIX="esp32/hello-test"'
 	'-DWIFI_SSID="MYWIFISSID"'
 	'-DWIFI_PSK="MYWIFIPASSWORD"'
-	'-DOTA_HASH="80e98f64761e74aae38bdea95f9ccefd"'	
+    '-DMQTT_SERVER="mqtt.example.de"'
+    '-DMQTT_PORT=1883'
+    '-DMQTT_USER="Username"'
+    '-DMQTT_PASS="myMQTTPassword"'
+	'-DOTA_HASH="80e98f64761e74aae38bdea95f9ccefd"'
 upload_protocol = espota
 upload_port = 192.168.1.223
 upload_flags = 

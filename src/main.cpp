@@ -599,8 +599,8 @@ void setupMQTT(void) {
   String myClientID;
   myClientID = composeClientID();
   DBG_SETUP.println("Connecting to MQTT-Server ... ");
-  DBG_SETUP.println("  - ClientID:");
-  DBG_SETUP.println(myClientID);  
+  DBG_SETUP.println("  - ClientID: ");
+  DBG_SETUP.print(myClientID);  
   if (mqtt.connect(myClientID.c_str(), MQTT_USER, MQTT_PASS, MQTT_PREFIX "/" T_STATUS, 1, true, STATUS_MSG_OFF, true))  { 
     DBG_SETUP.println("  - Register Callback");
     mqtt.setCallback(mqttCallback);
